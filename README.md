@@ -1,6 +1,6 @@
-<div style="text-align:center; font-size:1.2em; font-weight:500; margin-bottom:0.6em;">
+<h2 align="center">
 RiskAtlas: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
-</div>
+</h2>
 
 
 
@@ -29,25 +29,18 @@ Large language models (LLMs) are increasingly applied in specialized domains suc
 
 <p align="center">
 <pre>
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Knowledge     │    │   Harmful Prompt │    │   Toxicity      │
-│   Graph         │ -> │   Generation     │ -> │   Evaluation    │
-│   (Step 1)      │    │   (Step 2)       │    │   (Step 3)      │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-                                                        │
-                                                        v
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Implicit      │    │   Dataset        │    │   Dataset       │
-│   Rewrite       │ <- │   Assembly       │ <- │   Filtering     │
-│   (Step 5)      │    │   (Step 4)       │    │                 │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-        │
-        v
-┌─────────────────┐    ┌──────────────────┐
-│   Dataset       │    │   Quality        │
-│   Finalization  │ -> │   Check          │
-│   (Step 6)      │    │   (Step 7)       │
-└─────────────────┘    └──────────────────┘
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Knowledge     │    │   Harmful Prompt │    │   Toxicity      │    │   Dataset       │
+│   Graph         │ -> │   Generation     │ -> │   Evaluation    │ -> │   Filtering     │
+│   (Step 1)      │    │   (Step 2)       │    │   (Step 3)      │    │                 │
+└─────────────────┘    └──────────────────┘    └─────────────────┘    └─────────────────┘
+                                                                              │
+                                                                              v
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Quality       │    │   Dataset        │    │   Implicit      │    │   Dataset       │
+│   Check         │ <- │   Finalization   │ <- │   Rewrite       │ <- │   Assembly      │
+│   (Step 7)      │    │   (Step 6)       │    │   (Step 5)      │    │   (Step 4)      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘    └─────────────────┘
 </pre>
 </p>
 
