@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-03 12:00:57",
+  "domain": "law",
+  "statistics": {
+    "total_input": 947,
+    "passed_all_checks": 849,
+    "failed_check1_unsafe_prompt": 0,
+    "failed_check2_intent_mismatch": 98,
+    "failed_check3_response_safe": 142,
+    "attack_success_original": 514,
+    "attack_success_after_check": 338,
+    "skipped_no_stealth": 0
+  },
+  "quality_check_config": {
+    "batch_size": 50,
+    "max_workers": 200,
+    "evaluator_model": "google/gemini-2.5-flash"
+  },
+  "summary": {
+    "input_records": 947,
+    "output_records": 849,
+    "filter_rate": 0.10348468848996832,
+    "original_attack_success": 514,
+    "final_attack_success": 338,
+    "attack_success_reduction": 176
+  }
+}

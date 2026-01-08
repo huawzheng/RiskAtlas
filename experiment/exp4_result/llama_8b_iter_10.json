@@ -1,0 +1,24 @@
+{
+  "domain": "llama_8b_iter_10",
+  "toxicity_score": 0.7967869336521571,
+  "origin_self_bleu": {
+    "num_texts": 2260,
+    "self_bleu": 61.4428908179629
+  },
+  "stealth_self_bleu": {
+    "num_texts": 93,
+    "self_bleu": 25.884954551356287
+  },
+  "step6_metrics": {
+    "total_count": 591,
+    "cos_sim": 0.6103,
+    "ppl": 35.25
+  },
+  "step7_metrics": {
+    "success_count": 93,
+    "OSR": 15.74,
+    "avg_iter": 3.91,
+    "cos_sim": 0.6538,
+    "ppl": 35.19
+  }
+}

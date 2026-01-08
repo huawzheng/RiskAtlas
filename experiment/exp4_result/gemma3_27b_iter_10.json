@@ -1,0 +1,24 @@
+{
+  "domain": "gemma3_27b_iter_10",
+  "toxicity_score": 0.9809060516321334,
+  "origin_self_bleu": {
+    "num_texts": 2260,
+    "self_bleu": 62.926193568453186
+  },
+  "stealth_self_bleu": {
+    "num_texts": 177,
+    "self_bleu": 21.03787975861571
+  },
+  "step6_metrics": {
+    "total_count": 1344,
+    "cos_sim": 0.616,
+    "ppl": 39.22
+  },
+  "step7_metrics": {
+    "success_count": 177,
+    "OSR": 13.17,
+    "avg_iter": 4.12,
+    "cos_sim": 0.6381,
+    "ppl": 39.35
+  }
+}

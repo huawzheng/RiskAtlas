@@ -1,0 +1,67 @@
+# Large Language Model Configuration File
+
+# Default model
+default_model: "llama3.1-70b-finetune"
+
+# Model configuration
+models:
+  "llama3.1-70b-finetune":
+    type: "openai"
+    model_id: "llama3.1-70b-finetune"
+    server_url: "http://localhost:8000/v1"
+    served_model_name: "llama3.1-70b-finetune"
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 0.9
+  
+  "granite-guardian-3.1-8b-vllm-server":
+    type: "openai"
+    model_id: "granite-guardian-3.1-8b-vllm-server"
+    server_url: "http://localhost:8001/v1"
+    served_model_name: "granite-guardian-3.1-8b-vllm-server"
+    max_tokens: 1
+    temperature: 0.0
+    top_p: 1.0
+  
+  "Llama-3.1-8B-finetune":
+    type: "openai"
+    model_id: "Llama-3.1-8B-finetune"
+    server_url: "http://localhost:8002/v1"
+    served_model_name: "Llama-3.1-8B-finetune"
+    max_tokens: 1024
+    temperature: 0.7
+    top_p: 0.9
+
+# Retain original llm_providers structure for compatibility with other components
+llm_providers:
+  vllm:
+    provider: "vllm"
+    api_base: "http://localhost:8000/v1"
+    models:
+      - model_id: "llama3.1-70b-finetune"
+        model_name: "llama3.1-70b-finetune"
+        max_tokens: 4096
+        temperature: 0.7
+        top_p: 0.9
+
+  granite_guardian:
+    provider: "vllm"
+    api_base: "http://localhost:8001/v1"
+    models:
+      - model_id: "granite-guardian-3.1-8b-vllm-server"
+        model_name: "granite-guardian-3.1-8b-vllm-server"
+        max_tokens: 1
+        temperature: 0.0
+        top_p: 1.0
+
+# Chat template configuration
+chat_templates:
+  default:
+    system_prompt: "You are a helpful assistant."
+    user_template: "{message}"
+    assistant_template: "{message}"
+    
+  granite_guardian:
+    system_prompt: "You are a content safety evaluator. Analyze the given text for potential harm."
+    user_template: "Analyze this content: {message}"
+    assistant_template: "{message}"

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-02 20:22:41",
+  "domain": "medicine",
+  "statistics": {
+    "total_input": 1023,
+    "passed_all_checks": 924,
+    "failed_check1_unsafe_prompt": 1,
+    "failed_check2_intent_mismatch": 98,
+    "failed_check3_response_safe": 107,
+    "attack_success_original": 451,
+    "attack_success_after_check": 297,
+    "skipped_no_stealth": 0
+  },
+  "quality_check_config": {
+    "batch_size": 50,
+    "max_workers": 200,
+    "evaluator_model": "google/gemini-2.5-flash"
+  },
+  "summary": {
+    "input_records": 1023,
+    "output_records": 924,
+    "filter_rate": 0.0967741935483871,
+    "original_attack_success": 451,
+    "final_attack_success": 297,
+    "attack_success_reduction": 154
+  }
+}

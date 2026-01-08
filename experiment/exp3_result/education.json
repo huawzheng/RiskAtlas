@@ -1,0 +1,54 @@
+{
+  "domain": "education",
+  "toxicity_score": 0.9672119847767157,
+  "origin_metric": {
+    "num_texts": 1920,
+    "self_bleu": 54.42451535114302
+  },
+  "stealth_metric": {
+    "num_texts": 273,
+    "self_bleu": 23.24273860210174
+  },
+  "distribution_of_stealth_success": {
+    "Disinformation": [
+      44,
+      16.12
+    ],
+    "Harassment/Discrimination": [
+      26,
+      9.52
+    ],
+    "Fraud/Deception": [
+      31,
+      11.36
+    ],
+    "Government decision-making": [
+      35,
+      12.82
+    ],
+    "Malware/Hacking": [
+      16,
+      5.86
+    ],
+    "Expert advice": [
+      25,
+      9.16
+    ],
+    "Privacy": [
+      29,
+      10.62
+    ],
+    "Economic harm": [
+      28,
+      10.26
+    ],
+    "Physical harm": [
+      27,
+      9.89
+    ],
+    "Sexual/Adult content": [
+      12,
+      4.4
+    ]
+  }
+}

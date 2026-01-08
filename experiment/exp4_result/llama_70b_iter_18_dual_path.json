@@ -1,0 +1,15 @@
+{
+  "domain": "llama_70b_iter_18_dual_path",
+  "step6_metrics": {
+    "total_count": 1023,
+    "cos_sim": 0.5806,
+    "ppl": 38.57
+  },
+  "step7_metrics": {
+    "success_count": 376,
+    "OSR": 36.75,
+    "avg_iter": 6.44,
+    "cos_sim": 0.5941,
+    "ppl": 38.63
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "domain": "llama_70b_iter_10_enhance",
+  "step6_metrics": {
+    "total_count": 1023,
+    "cos_sim": 0.5793,
+    "ppl": 38.85
+  },
+  "step7_metrics": {
+    "success_count": 264,
+    "OSR": 25.81,
+    "avg_iter": 4.36,
+    "cos_sim": 0.5907,
+    "ppl": 38.95
+  }
+}

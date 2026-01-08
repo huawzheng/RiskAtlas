@@ -1,0 +1,19 @@
+{
+  "domain": "llama_70b_iter_10_dual_path",
+  "stealth_self_bleu": {
+    "num_texts": 297,
+    "self_bleu": 23.590332515480274
+  },
+  "step6_metrics": {
+    "total_count": 1023,
+    "cos_sim": 0.6025,
+    "ppl": 38.74
+  },
+  "step7_metrics": {
+    "success_count": 297,
+    "OSR": 29.03,
+    "avg_iter": 4.01,
+    "cos_sim": 0.6088,
+    "ppl": 38.78
+  }
+}

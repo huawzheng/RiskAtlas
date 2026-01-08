@@ -1,0 +1,24 @@
+{
+  "domain": "qwen3_14b_iter_10",
+  "toxicity_score": 0.9936022488041144,
+  "origin_self_bleu": {
+    "num_texts": 2260,
+    "self_bleu": 61.087863059860716
+  },
+  "stealth_self_bleu": {
+    "num_texts": 194,
+    "self_bleu": 18.74493185429671
+  },
+  "step6_metrics": {
+    "total_count": 769,
+    "cos_sim": 0.5452,
+    "ppl": 38.69
+  },
+  "step7_metrics": {
+    "success_count": 194,
+    "OSR": 25.23,
+    "avg_iter": 4.38,
+    "cos_sim": 0.5534,
+    "ppl": 38.74
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-02 20:18:00",
+  "domain": "education",
+  "statistics": {
+    "total_input": 735,
+    "passed_all_checks": 659,
+    "failed_check1_unsafe_prompt": 1,
+    "failed_check2_intent_mismatch": 75,
+    "failed_check3_response_safe": 99,
+    "attack_success_original": 410,
+    "attack_success_after_check": 273,
+    "skipped_no_stealth": 0
+  },
+  "quality_check_config": {
+    "batch_size": 50,
+    "max_workers": 200,
+    "evaluator_model": "google/gemini-2.5-flash"
+  },
+  "summary": {
+    "input_records": 735,
+    "output_records": 659,
+    "filter_rate": 0.10340136054421768,
+    "original_attack_success": 410,
+    "final_attack_success": 273,
+    "attack_success_reduction": 137
+  }
+}

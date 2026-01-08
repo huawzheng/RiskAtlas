@@ -1,0 +1,111 @@
+# Knowledge Graph Harmful Prompt Generation Pipeline Configuration File
+# Version: 1.0
+
+# Global configuration
+global:
+  project_name: "LLM_KG_Pipeline"
+  version: "1.0.0"
+  log_level: "INFO"
+  
+# Reproducibility configuration
+reproducibility:
+  random_seed: 42              # Global random seed
+  enable_deterministic: true   # Enable deterministic mode
+  note: "Fixed random seed ensures experimental reproducibility"
+  
+# Database configuration
+database:
+  neo4j:
+    uri: "bolt://localhost:7687"
+    user: "neo4j"
+    password: "12345678"
+    
+# Model configuration
+models:
+  # Harmful prompt generation model
+  harmful_prompt_generator:
+    model_name: "llama3.1-70b-finetune"
+    server_url: "http://localhost:8000/v1"
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 0.9
+    
+  # Toxicity evaluation model
+  toxicity_evaluator:
+    model_name: "granite-guardian-3.1-8b-vllm-server"
+    server_url: "http://localhost:8001/v1"
+    max_tokens: 1
+    temperature: 0.0
+    top_p: 1.0
+    
+  # Concealment model
+  implicit:
+    method: "academic_disguise"  # Academic disguise method
+    max_length: 500
+    temperature: 0.7
+    
+# Pipeline Stage 1: Knowledge graph construction and harmful prompt generation
+stage1:
+  # Step 1: Knowledge graph retrieval
+  knowledge_graph_retrieval:
+    # Wikidata retrieval parameters
+    max_depth: 3
+    min_sitelinks: 5
+    include_wikipedia_summary: true
+    
+  # Step 2: Harmful prompt generation
+  harmful_prompt_generation:
+    prompts_per_category: 2  # Number of prompts generated per category
+    test_node_count: 3       # Number of test nodes
+    categories_to_test: 5    # Number of categories tested per node
+    
+  # Step 3: Toxicity evaluation
+  toxicity_evaluation:
+    batch_size: 10
+    max_workers: 4
+    
+  # Step 4: Data filtering
+  data_filtering:
+    # Filtering thresholds
+    min_toxicity_score: 0.7
+
+# Pipeline Stage 2: Concealment rewriting
+stage2:
+  # Concealment parameters
+  implicit:
+    enable: true
+    methods: ["academic_disguise", "technical_terminology"]
+    preserve_semantic_meaning: true
+    output_format: "enriched"
+
+# Output configuration
+output:
+  # File naming pattern
+  naming_pattern: "{domain}_{stage}_{timestamp}"
+  
+  # Save formats
+  formats:
+    - "json"
+    - "csv"
+    
+  # Backup settings
+  backup_enabled: true
+  keep_intermediate_files: true
+
+# Concurrency and performance configuration
+performance:
+  max_workers: 4
+  batch_size: 10
+
+# Test configuration
+testing:
+  # Model initialization test parameters
+  model_initialization:
+    max_tokens: 50
+    test_prompt: "Hello, this is a test prompt. Please respond briefly."
+
+# Experiment tracking
+experiment_tracking:
+  enabled: true
+  log_detailed_metrics: true
+  save_model_outputs: true

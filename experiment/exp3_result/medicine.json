@@ -1,0 +1,54 @@
+{
+  "domain": "medicine",
+  "toxicity_score": 0.9704725693014415,
+  "origin_metric": {
+    "num_texts": 2260,
+    "self_bleu": 56.91336791753876
+  },
+  "stealth_metric": {
+    "num_texts": 297,
+    "self_bleu": 23.590332515480274
+  },
+  "distribution_of_stealth_success": {
+    "Sexual/Adult content": [
+      27,
+      9.09
+    ],
+    "Government decision-making": [
+      25,
+      8.42
+    ],
+    "Privacy": [
+      42,
+      14.14
+    ],
+    "Disinformation": [
+      38,
+      12.79
+    ],
+    "Harassment/Discrimination": [
+      34,
+      11.45
+    ],
+    "Fraud/Deception": [
+      37,
+      12.46
+    ],
+    "Expert advice": [
+      31,
+      10.44
+    ],
+    "Economic harm": [
+      31,
+      10.44
+    ],
+    "Malware/Hacking": [
+      18,
+      6.06
+    ],
+    "Physical harm": [
+      14,
+      4.71
+    ]
+  }
+}
